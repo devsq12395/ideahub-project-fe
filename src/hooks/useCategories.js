@@ -12,7 +12,7 @@ const useCategories = () => {
         try {
             const {
                 data: { data },
-            } = await axios.get("https://ideahub-project.vercel.app/api/v1/categories", {});
+            } = await axios.get("https://ideahub-project-api.vercel.app//api/v1/categories", {});
             console.log (data);
 
             return data;
@@ -24,13 +24,13 @@ const useCategories = () => {
 
     const handleSetCategory = async (categoryTitle) => {
         try {
-            console.log(`https://ideahub-project.vercel.app/api/v1/categories/${categoryTitle}`);
+            console.log(`https://ideahub-project-api.vercel.app//api/v1/categories/${categoryTitle}`);
 
-            const { data: { data: dataCategory } } = await axios.get(`https://ideahub-project.vercel.app/api/v1/categories/${categoryTitle}`);
+            const { data: { data: dataCategory } } = await axios.get(`https://ideahub-project-api.vercel.app//api/v1/categories/${categoryTitle}`);
             console.log(dataCategory);
             setCategory(dataCategory);
 
-            const { data: { data: dataPosts } } = await axios.get(`https://ideahub-project.vercel.app/api/v1/categories/${dataCategory.title}/posts`);
+            const { data: { data: dataPosts } } = await axios.get(`https://ideahub-project-api.vercel.app//api/v1/categories/${dataCategory.title}/posts`);
             console.log(dataPosts);
 
             return dataPosts;

@@ -11,7 +11,7 @@ const usePost = () => {
     const handleCreatePost = async (dataToSend) => {
         try {
             console.log (dataToSend);
-            const newPost = await axios.post("https://ideahub-project.vercel.app/api/v1/posts", dataToSend);
+            const newPost = await axios.post("https://ideahub-project-api.vercel.app//api/v1/posts", dataToSend);
         } catch (error) {
             console.error(error);
             setError(error.response.data.message);
@@ -21,7 +21,7 @@ const usePost = () => {
     const handleUpdatePost = async (dataToSend, postId) => {
         try {
             console.log (dataToSend);
-            const editPost = await axios.put (`https://ideahub-project.vercel.app/api/v1/posts/edit/${postId}`, dataToSend);
+            const editPost = await axios.put (`https://ideahub-project-api.vercel.app//api/v1/posts/edit/${postId}`, dataToSend);
         } catch (error) {
             console.error(error);
             setError(error.response.data.message);
@@ -30,7 +30,7 @@ const usePost = () => {
 
     const handleArchivePost = async (postId) => {
         try {
-            const archivePost = await axios.put (`https://ideahub-project.vercel.app/api/v1/posts/archive/${postId}`, {});
+            const archivePost = await axios.put (`https://ideahub-project-api.vercel.app//api/v1/posts/archive/${postId}`, {});
 
             alert ("Post is archived!");
             navigate (`/${category.title}`);
@@ -43,7 +43,7 @@ const usePost = () => {
 
     const handleGetPost = async (postId) => {
         try {
-            const {data: { data }} = await axios.post (`https://ideahub-project.vercel.app/api/v1/posts/${postId}`, {});
+            const {data: { data }} = await axios.post (`https://ideahub-project-api.vercel.app//api/v1/posts/${postId}`, {});
             console.log (data);
 
             return data;
@@ -57,7 +57,7 @@ const usePost = () => {
         try {
             const postId = dataToSend.postId;
             console.log (postId);
-            const newPost = await axios.post (`https://ideahub-project.vercel.app/api/v1/posts/${postId}/comments`, dataToSend);
+            const newPost = await axios.post (`https://ideahub-project-api.vercel.app//api/v1/posts/${postId}/comments`, dataToSend);
         } catch (error) {
             console.error(error);
             setError(error.message);
@@ -66,8 +66,8 @@ const usePost = () => {
 
     const handleGetComments = async (postId) => {
         try {
-            console.log (`https://ideahub-project.vercel.app/api/v1/posts/comments/${postId}`);
-            const {data: { data }} = await axios.get (`https://ideahub-project.vercel.app/api/v1/posts/comments/${postId}`, {});
+            console.log (`https://ideahub-project-api.vercel.app//api/v1/posts/comments/${postId}`);
+            const {data: { data }} = await axios.get (`https://ideahub-project-api.vercel.app//api/v1/posts/comments/${postId}`, {});
             console.log (data);
 
             return data;
