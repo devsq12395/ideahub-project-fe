@@ -1,0 +1,115 @@
+.container {
+  margin-top: 100px;
+  padding: 16px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: left;
+  margin-left: 100px;
+  margin-bottom: 32px;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+  cursor: pointer;
+  width: 100%;
+  height: 150px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.imageContainer {
+  width: 150px;
+  height: 150px;
+  min-width: 150px;
+  min-height: 150px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.postedBy {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.description {
+  font-size: 1rem;
+  color: #666;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.postBtns {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.h3Button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.h3Button:hover {
+  background-color: #0056b3;
+}
